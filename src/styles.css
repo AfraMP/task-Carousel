@@ -1,0 +1,16 @@
+/* You can add global styles to this file, and also import other style files */
+@import "primeicons/primeicons.css";
+@import "tailwindcss";
+
+@theme {
+  /* Add your custom color */
+  --color-slate-1: #777777;
+  --color-red-1: #B42318;
+  --color-green-1: #0DAC57;
+  --color-gradient-red1: #B33036;
+  --color-gradient-red2: #B23438;
+}
+
+@utility bg-custom-gradient1 {
+  background-image: linear-gradient(180deg, var(--color-gradient-start) 22.16%, var(--color-gradient-end) 100%);
+}

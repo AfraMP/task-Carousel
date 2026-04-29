@@ -1,0 +1,223 @@
+:host ::ng-deep .p-carousel-content .p-carousel-next-button {
+    right: 2.2rem;
+    position: relative;
+    z-index: 9;   
+    width: 0.3rem
+}
+
+:host ::ng-deep .p-carousel-content .p-carousel-prev-button {
+    z-index: 99;   
+    color: #000;
+    width: 0.3rem;
+}
+
+:host ::ng-deep .carousel .p-carousel-content .p-carousel-prev-button {
+    width: 0 !important;
+    left: 0.5rem;
+    position: absolute;
+}
+:host ::ng-deep .carousel .p-button-text.p-button-secondary {
+    color: #fff;
+    width: 2.5rem;
+    height: 5rem;
+    border-radius: unset;
+}
+
+:host ::ng-deep .carousel .p-carousel-prev-button .pi, :host ::ng-deep .carousel .p-carousel-next-button .pi {
+    font-size: 3rem;
+}
+
+:host ::ng-deep .carousel .p-button-text.p-button-secondary:hover {
+    background-color: rgba(128, 128, 128, 0.3);
+    color: #fff
+}
+
+:host ::ng-deep .carousel .p-carousel-content-container {
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+
+:host ::ng-deep .carousel .p-carousel-content .p-carousel-next-button {
+    width: 0 !important;
+    right: 3rem
+}
+.card-border {
+    border: 1px solid #E0E0E5
+}
+
+:host ::ng-deep .carousel1 .p-carousel-content-container:first-of-type {
+    background: linear-gradient(180deg, #B33036 22.16%, #B23438 100%);
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    padding-bottom: 2.6rem;
+}
+
+:host ::ng-deep .carousel2 .p-carousel-content-container:first-of-type {
+    background: #fff;
+    border-radius: 12px;
+    padding-bottom: 0;
+    padding-top: 0;
+}
+
+:host ::ng-deep .carousel2 .p-carousel-indicator-list {
+    gap: 0.2rem !important;
+    padding-bottom: 0.4rem;
+    padding-top: 0.4rem;
+}
+
+:host ::ng-deep .carousel2 .p-carousel-indicator-list .p-carousel-indicator:not(:first-child) .p-carousel-indicator-button {
+    width: 0.5rem !important;
+}
+
+:host ::ng-deep .carousel1 .p-carousel-content, :host ::ng-deep .carousel .p-carousel-content {
+    gap: unset
+}
+
+:host ::ng-deep  .p-button-label {
+    font-weight: 700;
+}
+
+:host ::ng-deep .mobile-peek .p-carousel-items-content {
+    padding-right: 15%; /* Adjust this % to show more or less of the 3rd item */
+    overflow: visible !important;
+}
+
+:host ::ng-deep .mobile-peek .p-carousel-item {
+    /* Optional: add some spacing between cards */
+    padding: 0 10px;
+}
+
+@media (max-width: 1024px) {
+    :host ::ng-deep .carousel1 .p-carousel-content-container:first-of-type {
+        padding-bottom: 2.8rem;
+    }
+
+    :host ::ng-deep .carousel .p-carousel-prev-button .pi, :host ::ng-deep .carousel .p-carousel-next-button .pi {
+        font-size: 2rem;
+    }
+
+    :host ::ng-deep .carousel .p-carousel-content .p-carousel-prev-button {
+        left: 0.25rem;
+    }
+
+    :host ::ng-deep .carousel .p-carousel-content .p-carousel-next-button {
+        right: 2.5rem
+    }
+
+    :host ::ng-deep .carousel1 .p-carousel-content-container:first-of-type {
+        padding: 0.2rem 0.6rem 2.8rem 0.6rem;
+    }
+
+    :host ::ng-deep .carousel2 .p-carousel-content-container:first-of-type {
+        padding: 0.2rem 0.6rem 0.2rem 0.6rem;
+    }
+}
+
+@media (max-width: 639px) {
+    :host ::ng-deep .carousel1 .p-carousel-items-content {
+        padding-right: 15%; /* Adjust this % to show more or less of the 3rd item */
+        overflow: visible !important;
+    }
+
+    :host ::ng-deep .carousel1 .carousel1-template  {
+        /* Optional: add some spacing between cards  .p-carousel-item*/
+        padding: 0.3;
+    }
+
+    :host ::ng-deep .carousel1 .p-carousel-content-container:first-of-type {
+        padding: 0.2rem 0.6rem 4rem 0.6rem;
+    }
+
+    :host ::ng-deep .carousel2 .p-carousel-content-container:first-of-type {
+        padding: 0.2rem 0.3rem 0.2rem 0.3rem;
+    }
+
+    :host ::ng-deep .carousel1 .p-carousel-content, :host ::ng-deep .carousel .p-carousel-content {
+        gap: 0.25rem
+    }
+    :host ::ng-deep .carousel .p-button-text.p-button-secondary {
+        color: #fff;
+        border-radius: unset;
+        width: 2rem;
+        height: 10.5rem;
+        border: none;
+    }
+    
+    :host ::ng-deep .carousel .p-carousel-content .p-carousel-prev-button .p-button-text.p-button-secondary {
+        border-top-left-radius: 12px;
+    }
+
+    :host ::ng-deep .carousel .p-carousel-content .p-carousel-prev-button .p-button-text.p-button-secondary {
+        border-top-right-radius: 12px;
+    }
+
+    :host ::ng-deep .carousel .p-carousel-content .p-carousel-prev-button {
+        left: 0.1rem;
+    }
+
+    :host ::ng-deep .carousel .p-carousel-content .p-carousel-next-button {
+        right: 2rem
+    }
+    :host ::ng-deep .carousel .p-carousel-prev-button .pi, :host ::ng-deep .carousel .p-carousel-next-button .pi {
+        font-size: 1.5rem;
+    }
+
+    :host ::ng-deep .carousel .p-button-text.p-button-secondary {
+        background: linear-gradient(90deg, rgba(0, 0, 0, 0.1) 0%, rgba(102, 102, 102, 0.1) 100%);
+        color: #fff
+    }
+}
+
+/* [dir="rtl"] .p-carousel {
+    direction: rtl !important;
+}
+
+[dir="rtl"] .rtl-mirror {
+    transform: rotate(180deg);
+}
+
+[dir="rtl"] .p-carousel-item {
+    direction: rtl;
+}
+
+[dir="rtl"] .p-carousel-items-content {
+    direction: ltr !important;
+}
+
+[dir="rtl"] .p-carousel-items-container {
+    flex-direction: row-reverse !important;
+}
+[dir="rtl"] .p-carousel-content {
+    flex-direction: row-reverse !important;
+} */
+:host ::ng-deep [dir="rtl"] .p-carousel {
+    direction: rtl;
+}
+
+:host-context([dir="rtl"]) {
+    ::ng-deep .carousel .p-carousel-content .p-carousel-next-button {
+        right: 0.5rem !important
+    }
+
+    ::ng-deep .carousel .p-carousel-content .p-carousel-prev-button {
+        left: 3rem !important
+    }
+
+    ::ng-deep .carousel2 .p-carousel-content .pi-heart {
+        left: 0 !important;
+        right: unset
+    }
+
+    ::ng-deep .carousel1 .p-carousel-content .p-carousel-next-button {
+        right: 0;
+    }
+
+    ::ng-deep .carousel1 .p-carousel-content .p-carousel-prev-button {
+        position: relative;
+        left: 2.2rem
+    }
+    ::ng-deep .carousel1 .p-carousel-item .cash-icon {
+        transform: scaleX(-1);
+    }
+
+}

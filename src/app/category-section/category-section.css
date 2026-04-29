@@ -1,0 +1,85 @@
+:host ::ng-deep .p-carousel-indicator-list {
+    gap: unset;
+}
+
+:host ::ng-deep .p-carousel-indicator-button{
+    border-radius: unset;
+}
+
+:host ::ng-deep .p-carousel-indicator-active .p-carousel-indicator-button {
+    border-radius: 6px;
+}
+
+:host ::ng-deep .p-carousel-content .p-carousel-next-button {
+    right: 2.2rem;
+    position: relative;
+}
+
+:host ::ng-deep .p-carousel-content .p-carousel-prev-button {
+    left: 2.2rem;
+    position: relative;
+    z-index: 999;
+}
+
+@media (max-width: 1024px) {
+:host ::ng-deep .p-carousel-content-container {
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 639px) {
+:host ::ng-deep .p-carousel-content-container {
+        padding-bottom: 1rem;
+    }
+}
+
+
+/* :host ::ng-deep [dir="rtl"] .p-carousel-item-list {
+    flex-direction: row-reverse !important;
+} */
+
+:host ::ng-deep .p-carousel-container {
+ direction: rtl;
+}
+
+:host ::ng-deep .p-carousel-items-content {
+  transform-origin: center;
+}
+
+/* :host ::ng-deep [dir="rtl"] .p-carousel-items-content {
+  direction: rtl !important;
+}
+:host ::ng-deep [dir="rtl"] .p-carousel-items-container {
+  transform: translate3d(100%, 0, 0) !important;
+} */
+
+/* Enable RTL for PrimeNG Carousel */
+:host ::ng-deep [dir="rtl"] .p-carousel {
+    direction: rtl;
+}
+
+/* Flip the whole carousel */
+:host ::ng-deep [dir="rtl"] .p-carousel-items-container {
+    transform: scaleX(-1) !important;
+}
+
+/* Flip each item back to normal */
+:host ::ng-deep [dir="rtl"] .p-carousel-item {
+    transform: scaleX(-1);
+}
+
+/* Fix indicators */
+:host ::ng-deep [dir="rtl"] .p-carousel-indicators {
+    direction: rtl;
+}
+
+/* Fix next/prev buttons */
+:host ::ng-deep [dir="rtl"] .p-carousel-next-button {
+    right: auto;
+    left: 0.5rem;
+}
+
+:host ::ng-deep [dir="rtl"] .p-carousel-prev-button {
+    left: auto;
+    right: 0.5rem;
+}

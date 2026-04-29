@@ -1,0 +1,37 @@
+@if (innerwidth > 767) {
+    <div class="items-center">
+        <p-carousel [value]="displayImages()" styleClass="carousel" [numVisible]="9" [numScroll]="3" [showNavigators]="innerwidth > 1024" [responsiveOptions]="responsiveOptions" [circular]="false" >
+            <ng-template let-image #item>
+                <div class="h-[100px] w-[97%]"> 
+                    <img [src]="image.img"  [alt]="image.name"class="h-full w-full object-contain" />
+                </div>
+                <p class="font-medium text-[14px] text-center">{{image.name}}</p>
+            </ng-template>
+        </p-carousel>
+    </div>
+} @else {
+    <p-carousel 
+    [value]="mobileImage" 
+    [numVisible]="1" 
+    [numScroll]="1" 
+    orientation="horizontal" 
+    [showNavigators]="false"
+    [pt]="{
+        indicator: { class: '!m-0 !p-0' },
+        indicatorButton: { class: '!w-8 !h-1 !rounded-full' }
+    }">
+    
+    <ng-template let-page pTemplate="item">
+        <div class="grid grid-cols-4 gap-4 p-4">
+            @for (category of page; track category.name) {
+                <div class="flex flex-col items-center justify-center text-center">
+                    <div class="w-20 h-20 rounded-full bg-gray-100 flex items-center justify-center mb-2 overflow-hidden">
+                        <img [src]="category.img" class="w-16 h-16 object-contain" />
+                    </div>
+                    <span class="text-xs font-semibold leading-tight">{{ category.name }}</span>
+                </div>
+            }
+        </div>
+    </ng-template>
+</p-carousel>
+}

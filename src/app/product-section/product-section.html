@@ -1,0 +1,67 @@
+
+<div class="w-full max-w-[640px] sm:max-w-[768px] md:max-w-[896px] lg:max-w-[80rem] m-auto">
+    <div  class="relative">
+        <div>
+            <p-carousel [value]="bannerImages" (onPage)="onNavigatorClick($event)" styleClass="carousel" [numVisible]="1" [numScroll]="3"  [showIndicators]="false" [circular]="true" >
+                <ng-template pTemplate="previousicon">
+                    <i class="pi pi-angle-left text-5xl "></i>
+                </ng-template>
+                <ng-template pTemplate="nexticon">
+                    <i class="pi pi-angle-right text-xl"></i>
+                </ng-template>
+                <ng-template let-image #item>
+                    <img [src]="image" />
+                </ng-template>
+            </p-carousel>
+        </div>
+        <p-carousel [value]="products()" styleClass="carousel1" [numVisible]="3" [numScroll]="3"  [showIndicators]="false" [showNavigators]="innerwidth > 1024" [circular]="false" [responsiveOptions]="responsiveOptions">
+            <ng-template let-product #item>
+                <div class="p-0.6 carousel1-template">
+                    <div class="card-border rounded-xl mb-2 mt-2 ml-1 mr-1 p-2 bg-white">
+                            <div class="relative mx-auto">
+                                <p-carousel styleClass="carousel2" (onIndicatorKeydown)="onIndicatorKeydown()" #innerCarousel [value]="product.images" [numVisible]="1" [showIndicators]="innerwidth > 1024" [showNavigators]="false" [numScroll]="1" >
+                                    <ng-template let-image #item >
+                                        <img [src]="image" [alt]="product.name" class="w-full lg:pt-[1.5rem] max-h-[30rem] rounded-border" />
+                                        <p-button icon="pi pi-heart" severity="secondary" size="small" class="absolute right-0" [ngStyle]="{ 'top.px': 0 }" />
+                                    </ng-template>
+                                </p-carousel>
+                            </div>
+                        <div class="leading-[0.8rem]">
+                            <div class="font-medium text-sm h-[2.5rem] line-clamp-2">{{ product.name }}</div>
+                            <span>
+                                @for (item of [1, 2, 3, 4, 5]; track $index) {
+                                    <i class="pi" 
+       [ngClass]="product.rating >= ($index + 1) ? 'pi-star-fill mr-[4px]' : 'pi-star mr-[4px]'" 
+       style="font-size: 0.6rem; color: yellow"></i>
+                                }
+                                <span class="font-normal text-slate-1" style="font-size: 0.6rem">{{product?.rating}} &#40;{{product?.customer_rating_count}}&#41; </span>
+                            </span>
+                                <div class="cost">
+                                    @if (general.isRtl() === 'rtl') {
+                                        <span class="line-through text-[10px] text-slate-1 mr-2">{{product?.price}}</span>
+                                        <span class="mr-1 font-bold text-base">&Dstrok; {{ product?.discounted_price | number:'1.2-2'}}</span> 
+                                    } @else {
+
+                                        <span class="mr-1 font-bold text-base">&Dstrok; {{ product?.discounted_price | number:'1.2-2'}}</span> 
+                                        <span class="line-through text-[10px] text-slate-1 mr-2">{{product?.price}}</span>
+                                        <span class=" text-red-1 text-[10px] font-bold inline align-middle">{{product.discount_percent}}&#37; OFF</span>
+                                    }
+                                </div>
+                            <div class="flex gap-1 mb-0.5">
+                                <img src="assets/cash.svg" alt="tabby" class="h-[1rem] cash-icon" />
+                                <div class="font-medium text-[10px] text-green-1 gap-2">Cash on Delivery</div>
+                            </div>
+                            <div class="flex gap-2">
+                                <img src="assets/Tamara.svg" alt="tabby" class="h-[1rem]" />
+                                <img src="assets/Tabby.svg" alt="tamara" class="h-[1rem]"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </ng-template>
+        </p-carousel>
+         <div class="card ml-3 mr-3 lg:ml-2 lg:mr-2 ui-fluid -top-[3.7rem] md:-top-[2.7rem] lg:-top-[2.6rem] relative">
+             <p-button [size]="innerwidth < 767 ? 'large' : 'small'" fluid="true" [style]="{'border': 'none', 'color': '#B32E33', 'background-color': '#fff'}" label="View More" (onClick)="onViewMore()" />
+         </div>
+    </div>
+</div>
